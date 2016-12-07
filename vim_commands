@@ -1,0 +1,38 @@
+##############################
+#       VIM COMMANDS         #
+##############################
+
+BASIC EDITING
+
+h			Move one character to the right
+j			Move one character to the left
+k			Move to the previous line
+l 			Move to the next line
+0			Move to the line start
+$			Move to the line end
+w			Move one word forward (with punctuation)
+2w			Move two words forward
+W			Move one word forward (ignore punctuation)
+2b			Move two words backwards
+e			Move to the end of the current word (with punctuation)
+E			Move to the end of the current word (ignore punctuation)
+G			Move to the end of the file
+1G			Move to the first line (or specified line number)
+i			Insert text before current position
+I			Insert text at the start of the current line
+a 			Insert text after the current position
+A			Insert text after the end of the current line
+o			Inserts a new line after the current line
+O			Inserts a new line before the current line
+c			Change text. It must be followed by a movement command
+cw			Change one word forward
+cb			Change one word backward
+c0			Change everything till line start
+c$			Change everything till line end
+C			Change everything till line end
+cc			Change the current line entirely
+r			Replaces the current character. Only one replacement is allowed
+R			Enter the overwrite mode. Multiple replacements allowed
+s			Substitute characters. It must be preceded by a number
+3s			Replace the following three characters
+S			change the current line entirely

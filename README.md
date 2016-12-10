@@ -1,4 +1,4 @@
-# vim_tester
+# vim
 
 vim_commands contains common commands used in the vim editor
 

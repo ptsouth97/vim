@@ -36,4 +36,4 @@ print(name+ ' you got ' +str(percentage)+ '% correct.')
 if percentage >= 80:
 	print('You are a VIM master!')
 else:
-	print('Keep working on it!')
+	print('Keep working on it!') 

@@ -21,14 +21,14 @@ def print_intro():
 
 
 def question_loop():
-	flag=1
+	flag='1'
 	right=0
 	wrong=0
 
 	the_list = vim_list.commands
 	total_questions = len(the_list) - 1
 
-	while flag == 1:
+	while flag == '1':
 		n=rand.randint(0, total_questions)
 		print('What command ' +the_list[n][1]+ '?')
 		answer=input()
@@ -38,8 +38,9 @@ def question_loop():
 		else:
 			print('Not quite.  The answer is ' +the_list[n][0])
 			wrong=wrong+1
-		print("Enter 1 to continue, or 0 to quit")
-		flag=int(input())
+		print("Enter 1 to continue, or any other key to quit")
+		flag=input()
+		
 
 	total=right+wrong
 	percentage_correct=round(right/total*100,1)

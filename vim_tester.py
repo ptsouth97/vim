@@ -13,11 +13,11 @@ def print_intro():
 	print('Welcome to VIM tester!')
 	print('What is your name?')
 
-	the_name=input()
+	usr_name=input()
 
-	print('Hello, ' +the_name)
-	print('I am going to ask you a series of questions to test your VIM knowledge')
-	return the_name
+	print('Hello, {}.'.format(usr_name))
+	print('I am going to ask you a series of questions to test your VIM knowledge.')
+	return usr_name
 
 
 def question_loop():
@@ -30,13 +30,13 @@ def question_loop():
 
 	while flag == '1':
 		n=rand.randint(0, total_questions)
-		print('What command ' +the_list[n][1]+ '?')
+		print('\nWhat command {} ?'.format(the_list[n][1]))
 		answer=input()
 		if answer==the_list[n][0]:
-			print('Yes, you are correct!')
+			print('Yes, you are correct! \n')
 			right=right+1
 		else:
-			print('Not quite.  The answer is ' +the_list[n][0])
+			print('Not quite.  The answer is {}. \n'.format(the_list[n][0]))
 			wrong=wrong+1
 		print("Enter 1 to continue, or any other key to quit")
 		flag=input()
@@ -46,12 +46,13 @@ def question_loop():
 	percentage_correct=round(right/total*100,1)
 	return percentage_correct
 
+
 def print_results(perc, nm):
-	print(nm+ ', you got ' +str(perc)+ '% correct.')
+	print('{}, you got {}% correct.'.format(nm, str(perc)))
 	if perc >= 80:
 		print('You are a VIM master, {}!'.format(nm))
 	else:
-		print('Keep practicing VIM, ' +nm+ '!') 
+		print('Keep practicing VIM, {}!'.format(nm)) 
 
 
 if __name__ == '__main__':

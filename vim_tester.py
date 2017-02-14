@@ -3,14 +3,24 @@ import vim_list
 
 def main():
 
+	name = print_intro()	
+	percentage = question_loop()
+	print_results(percentage, name)	
+
+
+def print_intro():
+
 	print('Welcome to VIM tester!')
 	print('What is your name?')
 
-	name=input()
+	the_name=input()
 
-	print('Hello, ' +name)
+	print('Hello, ' +the_name)
 	print('I am going to ask you a series of questions to test your VIM knowledge')
+	return the_name
 
+
+def question_loop():
 	flag=1
 	right=0
 	wrong=0
@@ -31,12 +41,16 @@ def main():
 		flag=int(input())
 
 	total=right+wrong
-	percentage=round(right/total*100,1)
-	print(name+ ', you got ' +str(percentage)+ '% correct.')
-	if percentage >= 80:
-		print(name+ ', you are a VIM master!')
+	percentage_correct=round(right/total*100,1)
+	return percentage_correct
+
+def print_results(perc, nm):
+	print(nm+ ', you got ' +str(perc)+ '% correct.')
+	if perc >= 80:
+		print(nm+ ', you are a VIM master!')
 	else:
-		print('Keep working on it, ' +name+ '!') 
+		print('Keep practicing VIM, ' +nm+ '!') 
+
 
 if __name__ == '__main__':
 	main()

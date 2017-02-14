@@ -26,9 +26,10 @@ def question_loop():
 	wrong=0
 
 	the_list = vim_list.commands
+	total_questions = len(the_list) - 1
 
 	while flag == 1:
-		n=rand.randint(0,1)
+		n=rand.randint(0, total_questions)
 		print('What command ' +the_list[n][1]+ '?')
 		answer=input()
 		if answer==the_list[n][0]:
@@ -47,7 +48,7 @@ def question_loop():
 def print_results(perc, nm):
 	print(nm+ ', you got ' +str(perc)+ '% correct.')
 	if perc >= 80:
-		print(nm+ ', you are a VIM master!')
+		print('You are a VIM master, {}!'.format(nm))
 	else:
 		print('Keep practicing VIM, ' +nm+ '!') 
 
